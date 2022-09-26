@@ -4,7 +4,7 @@ const axios = require("axios");
 const app = express();
 const port = 8080;
 
-app.get("/with-svc", (req, res) => {
+app.get("/", (req, res) => {
   axios
     .get("http://demo-be.gigium-dev.svc.cluster.local:8080/")
     .then((resp) => {
