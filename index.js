@@ -6,7 +6,7 @@ const port = 8080;
 
 app.get("/", (req, res) => {
   axios
-    .get("http://demo-be.gigium-dev.svc.cluster.local:8080/")
+    .get("http://demo-be.test.svc.cluster.local:8080/")
     .then((resp) => {
       console.log(resp.data.color);
       res.send(
@@ -23,7 +23,7 @@ app.get("/", (req, res) => {
 
 app.get("/with-route", (req, res) => {
   axios
-    .get("https://demo-be-gigium-dev.apps.sandbox.x8i5.p1.openshiftapps.com")
+    .get("http://demo-be-test.172.17.157.57.nip.io/")
     .then((resp) => {
       console.log(resp.data.color);
       res.send(
